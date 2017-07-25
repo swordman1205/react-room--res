@@ -1,0 +1,149 @@
+@import './variables/colors';
+@import './variables/fonts';
+@import './variables/breakpoints';
+@import './utils/mixins';
+
+.stars {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  text-align: left;
+
+  @media (max-width: $medium) {
+    margin-bottom: 10px;
+  }
+}
+
+.selected {
+  background: url(./static/img/star-empty.svg);
+  position: relative;
+  height: 18px;
+  width: 91px;
+  cursor: pointer;
+}
+
+.current {
+  background: url(./static/img/star.svg);
+  position: absolute;
+  width: 0;
+  height: 18px;
+
+  &--1 {
+    composes: current;
+    width: 20%;
+  }
+
+  &--2 {
+    composes: current;
+    width: 40%;
+  }
+
+  &--3 {
+    composes: current;
+    width: 60%;
+  }
+
+  &--4 {
+    composes: current;
+    width: 80%;
+  }
+
+  &--5 {
+    composes: current;
+    width: 100%;
+  }
+}
+
+.input {
+  display: none;
+
+  &:checked + .star:after {
+    background: url(./static/img/star.svg);
+  }
+}
+
+.star {
+  display: block;
+  background: url(./static/img/star-empty.svg);
+  position: relative;
+  height: 18px;
+  width: 91px;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    background: url(./static/img/star-gray.svg);
+    position: absolute;
+    height: 18px;
+    width: 0;
+  }
+
+  &--1 {
+    composes: star;
+    &:after {
+      width: 20%;
+    }
+  }
+
+  &--2 {
+    composes: star;
+    &:after {
+      width: 40%;
+    }
+  }
+
+  &--3 {
+    composes: star;
+    &:after {
+      width: 60%;
+    }
+  }
+
+  &--4 {
+    composes: star;
+    &:after {
+      width: 80%;
+    }
+  }
+
+  &--5 {
+    composes: star;
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+.dropdown {
+  display: none;
+  background: $white;
+  position: absolute;
+  padding: 6px 10px;
+  border: 2px solid $border-gray;
+  bottom: 23px;
+  left: -12px;
+  z-index: 1;
+
+  &--opened {
+    composes: dropdown;
+    display: block;
+  }
+
+  &:before {
+    content: '';
+    @include caret-bottom(8px, 8px, $border-gray);
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    margin-left: -8px;
+  }
+
+  &:after {
+    content: '';
+    @include caret-bottom(6px, 6px, $white);
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    margin-left: -6px;
+  }
+}

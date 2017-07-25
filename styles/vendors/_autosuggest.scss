@@ -1,0 +1,36 @@
+.react-autosuggest {
+  position: relative;
+
+  &__input {
+    background-color: $white;
+    color: $gray;
+    font: 300 16px/18px $Roboto;
+    height: 35px;
+    border: 1px solid $fields-border;
+    border-radius: 0;
+    padding: 6px 9px;
+    width: 100%;
+  }
+
+  &__suggestions-container {
+    background: #fff;
+    position: absolute;
+    border: 1px solid $fields-border;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__suggestion {
+    color: #333;
+    padding: 6px 9px;
+    cursor: pointer;
+  }
+
+  &__no-suggestions {
+    background: $white;
+    position: absolute;
+    border: 1px solid $fields-border;
+    padding: 6px 9px;
+    width: 100%;
+  }
+}

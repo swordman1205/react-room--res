@@ -1,0 +1,61 @@
+@import './variables/colors';
+@import './variables/fonts';
+
+.cell {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+
+  &--big {
+    composes: cell;
+    width: 40%;
+    margin-top: 9px;
+  }
+}
+
+.room {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.description {
+  text-align: right;
+  margin-top: 3px;
+}
+
+.children {
+  margin: 15px 0 10px;
+}
+
+.child {
+  display: inline-block;
+  width: 80;
+  vertical-align: middle;
+}
+
+.child-row {
+  margin-bottom: 5px;
+}
+
+.remove {
+  background: none;
+  font: 12px/12px $Roboto;;
+  color: $light-blue;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.index {
+  margin-right: 5px;
+}

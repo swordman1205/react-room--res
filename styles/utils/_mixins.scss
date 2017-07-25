@@ -1,0 +1,11 @@
+@mixin caret-top($width, $height, $color) {
+  border-left: $width solid transparent;
+  border-right: $width solid transparent;
+  border-bottom: $height solid $color;
+}
+
+@mixin caret-bottom($width, $height, $color) {
+  border-left: $width solid transparent;
+  border-right: $width solid transparent;
+  border-top: $height solid $color;
+}

@@ -1,0 +1,39 @@
+@import './variables/colors';
+@import './variables/fonts';
+@import './variables/breakpoints';
+
+.footer {
+  background: $green;
+  font: 12px/14px $Roboto;
+  color: $white;
+  padding: 15px 0 55px;
+  text-align: center;
+
+  @media (max-width: $small) {
+    padding: 15px 0 30px;
+  }
+}
+
+.link {
+  color: $white;
+  text-decoration: none;
+  margin-right: 8px;
+
+  @media (max-width: $small) {
+    display: inline-block;
+    margin-bottom: 3px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.copyright {
+  margin-right: 8px;
+
+  @media (max-width: $small) {
+    display: block;
+    margin: 0 0 5px 0;
+  }
+}

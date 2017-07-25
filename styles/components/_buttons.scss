@@ -1,0 +1,327 @@
+.btn {
+  display: inline-block;
+  font: 400 14px/16px $Roboto;
+  padding: 6px 12px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+
+  &--transparent,
+  &--b-transparent,
+  &--b-transparent-small {
+    background: transparent;
+    font: 300 14px/16px $Roboto;
+    color: $white;
+    padding: 7px 14px;
+    border: 1px solid $transparent-white;
+    transition: border-color .4s, color .4s;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -1px;
+      right: -1px;
+      height: 100%;
+      background: $white;
+      z-index: -1;
+      opacity: 0;
+      transform: scale3d(.7, 1, 1);
+      transition: transform .4s, opacity .4s;
+      transition-timing-function: cubic-bezier(.2, 1, .3, 1);
+      border-radius: 5px;
+    }
+
+    &:hover {
+      color: $light-blue;
+
+      &:before {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+
+  &--b-transparent,
+  &--b-transparent-small {
+    font: 700 16px/18px $Helvetica;
+    color: $blue;
+    border: 2px solid $blue;
+    width: 180px;
+    height: 42px;
+    text-decoration: none;
+    padding: 10px 14px;
+
+    &:before {
+      background: $blue;
+      left: -2px;
+      right: -2px;
+    }
+
+    &:hover {
+      color: $white;
+    }
+
+    @media (max-width: $medium) {
+      font: 700 14px/16px $Helvetica;
+      width: 110px;
+      padding: 8px 5px;
+      height: 38px;
+    }
+
+    @media (max-width: $small) {
+      width: 48%;
+      padding: 8px 5px;
+    }
+  }
+
+  &--b-transparent-small {
+    font: 700 14px/16px $Helvetica;
+    color: $blue;
+    width: 125px;
+    height: 38px;
+    padding: 8px 14px;
+
+    @media (max-width: $large) {
+      width: 110px;
+      padding: 8px 5px;
+    }
+
+    @media (max-width: $small) {
+      width: 48%;
+      padding: 8px 5px;
+    }
+  }
+
+  &--signin {
+    margin-top: 3px;
+  }
+
+  &--link {
+    background: transparent;
+    padding: 0;
+    color: $light-blue;
+    vertical-align: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--link-black {
+    background: transparent;
+    padding: 0;
+    color: $black;
+    vertical-align: inherit;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &--green,
+  &--blue {
+    background: $green;
+    font: 300 16px/18px $Roboto;
+    color: $white;
+    height: 35px;
+
+    &:before {
+      content: "";
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+      background: lighten($green, 10%);
+    	z-index: -1;
+    	border-radius: inherit;
+    	opacity: 0;
+    	transform: scale3d(.6, .6, 1);
+    	transition: transform .3s, opacity .3s;
+    	transition-timing-function: cubic-bezier(.75, 0, .125, 1);
+    }
+
+    &:hover {
+      &:before {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      &:before {
+        background: darken($green, 10%);
+        transform: scale3d(.6, .6, 1);
+        opacity: 0;
+      }
+    }
+  }
+
+  &--blue {
+    background: $blue;
+    font: 300 16px/18px $Helvetica;
+    text-decoration: none;
+    height: 38px;
+    padding: 10px 6px;
+    width: 100%;
+
+    &:before {
+      background: lighten($blue, 10%);
+    }
+
+    &:active {
+      &:before {
+        background: darken($blue, 10%);
+      }
+    }
+  }
+
+  &--t-green {
+    background: transparent;
+    font: 700 16px/18px $Roboto;
+    color: $white;
+    height: 36px;
+    border: 2px solid $white;
+    border-radius: 5px;
+
+    &:before {
+      content: "";
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+      background: lighten($green, 10%);
+    	z-index: -1;
+    	border-radius: inherit;
+    	opacity: 0;
+    	transform: scale3d(.6, .6, 1);
+    	transition: transform .3s, opacity .3s;
+    	transition-timing-function: cubic-bezier(.75, 0, .125, 1);
+    }
+
+    &:hover {
+      &:before {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      &:before {
+        background: darken($green, 10%);
+        transform: scale3d(.6, .6, 1);
+        opacity: 0;
+      }
+    }
+  }
+
+  &--wide {
+    width: 100%;
+  }
+
+  &--big {
+    width: 100%;
+    padding: 6px 26px;
+  }
+
+  &--add {
+    background: url(../static/img/add.svg) transparent no-repeat;
+    font: 300 12px/14px $Roboto;
+    color: $gray;
+    padding: 0 0 0 18px;
+    border-radius: 0;
+  }
+
+  &--counter {
+    background: $light-blue;
+    font: 700 30px/30px $Roboto;
+    color: $white;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    transition: background .2s;
+
+    &:hover {
+      background: $link-active-color;
+    }
+  }
+
+  &--b-link {
+    background: transparent;
+    padding: 0;
+    color: $dark-gray;
+    vertical-align: inherit;
+    text-decoration: underline;
+    margin-right: 10px;
+    line-height: 17px;
+    padding-left: 23px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &--info {
+    background: url('../static/img/info.png') no-repeat;
+  }
+
+  &--location {
+    background: url('../static/img/location.png') no-repeat;
+  }
+
+  &--green-book,
+  &--green-book-small {
+    background: $dark-green;
+    font: 16px/18px $Helvetica;
+    color: $white;
+    border-radius: 30px 0 0 30px;
+    text-decoration: none;
+    width: 100%;
+    height: 55px;
+    padding: 18px 5px;
+
+    &:before {
+      content: "";
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+      background: lighten($dark-green, 10%);
+    	z-index: -1;
+    	border-radius: inherit;
+    	opacity: 0;
+    	transform: scale3d(.6, .6, 1);
+    	transition: transform .3s, opacity .3s;
+    	transition-timing-function: cubic-bezier(.75, 0, .125, 1);
+    }
+
+    &:hover {
+      &:before {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      &:before {
+        background: darken($dark-green, 10%);
+        transform: scale3d(.6, .6, 1);
+        opacity: 0;
+      }
+    }
+  }
+
+  &--green-book-small {
+    height: 42px;
+    padding: 12px 5px;
+  }
+}

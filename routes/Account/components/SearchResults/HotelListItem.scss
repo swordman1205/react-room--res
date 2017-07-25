@@ -1,0 +1,178 @@
+@import './variables/colors';
+@import './variables/fonts';
+@import './variables/breakpoints';
+
+.item {
+  display: table;
+  color: $dark-gray;
+  width: 100%;
+  border: 1px solid $item-border;
+  box-shadow: 0 0 2px $item-border;
+  margin-bottom: 8px;
+
+  @media (max-width: $small) {
+    display: block;
+  }
+}
+
+.img-cell {
+  width: 250px;
+  padding-right: 15px;
+  position: relative;
+  vertical-align: middle;
+
+  @media (max-width: $small) {
+    display: block;
+    width: auto;
+    padding-right: 0;
+  }
+}
+
+.img {
+  width: 235px;
+  border-radius: 0 43px 43px 0;
+
+  @media (max-width: $small) {
+    width: 375px;
+    border-radius: 0;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $x-small) {
+    width: 320px;
+  }
+}
+
+.slider-wrap {
+  display: block;
+  width: 235px;
+
+  @media (max-width: $small) {
+    width: 100%;
+  }
+}
+
+.info {
+  padding-top: 10px;
+
+  @media (max-width: $small) {
+    display: block;
+    padding: 10px;
+  }
+}
+
+.title-row {
+  min-height: 30px;
+}
+
+.row {
+  margin-bottom: 13px;
+}
+
+.title {
+  font: 700 20px/22px $Helvetica;
+  color: $blue;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.rating {
+  display: inline-block;
+  background: url(./static/img/star-empty.svg);
+  background-size: 20px;
+  position: relative;
+  height: 20px;
+  width: 100px;
+  vertical-align: middle;
+  margin: 0 2px 0 -3px;
+}
+
+.current-rating {
+  background: url(./static/img/star.svg);
+  background-size: 20px;
+  position: absolute;
+  width: 0;
+  height: 20px;
+}
+
+.rating-text {
+  margin-right: 10px;
+}
+
+.cancellation,
+.rating-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.tripadvisor {
+  margin: -2px 0 0 4px;
+}
+
+.description {
+  list-style: disc;
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  padding: 4px;
+  width: 196px;
+
+  @media (max-width: $small) {
+    display: block;
+    width: auto;
+  }
+}
+
+.price-block {
+  font: 300 14px/16px $Helvetica;
+  text-align: center;
+}
+
+.net-price-block {
+  background: $extra-light-blue;
+  border-radius: 0 0 0 25px;
+  padding-top: 5px;
+}
+
+.net-price-row {
+  font: 300 44px/46px $Helvetica;
+}
+
+.small-text {
+  font: 300 15px/16px $Helvetica;
+}
+
+.online-price-block {
+  background: $online-gray;
+  border-radius: 25px 0 0 0;
+  padding: 6px;
+}
+
+.online-price-row {
+  display: table;
+  font: 24px/26px $Helvetica;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.x-small-text {
+  font: 12px/14px $Helvetica;
+}
+
+.commision {
+  font: 300 13px/16px $Helvetica;
+  width: 100px;
+}
+
+.price-cell {
+  vertical-align: bottom;
+}
+
+.block {
+  display: block;
+}

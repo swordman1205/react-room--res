@@ -1,0 +1,14 @@
+@import './variables/fonts';
+@import './variables/colors';
+
+.container {
+  display: inline-block;
+}
+
+.value {
+  display: inline-block;
+  font: 700 20px/22px $Roboto;
+  color: $gray;
+  padding: 2px 10px;
+  vertical-align: middle;
+}

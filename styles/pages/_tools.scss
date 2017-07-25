@@ -1,0 +1,21 @@
+.tools {
+  &__subtitle {
+    font: 300 30px/32px Roboto;
+    color: $subtitle-color;
+    margin-bottom: 23px;
+  }
+
+  &__search-label {
+    display: inline-block;
+    font: 700 12px/14px $Roboto;
+    color: $label-color;
+    margin-bottom: 4px;
+    vertical-align: top;
+
+    &--block {
+      display: block;
+      text-align: right;
+      margin-top: -18px;
+    }
+  }
+}

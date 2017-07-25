@@ -1,0 +1,51 @@
+@import './variables/colors';
+@import './variables/fonts';
+
+.container {
+  background: $lighten-blue;
+  float: right;
+  border-radius: 15px;
+  padding: 2px;
+  border: none;
+  transition: background .2s;
+  cursor: pointer;
+
+  &:hover {
+    background: $light-blue;
+  }
+
+  &--customer {
+    composes: container;
+
+    .btn--agent {
+      background-color: transparent;
+      opacity: .5;
+    }
+
+    .btn--customer {
+      background-color: $white;
+      opacity: 1;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 50%;
+  width: 21px;
+  height: 21px;
+  opacity: .5;
+  vertical-align: middle;
+  transition: all .2s;
+
+  &--agent {
+    composes: btn;
+    background: url(static/img/user.svg) center center no-repeat $white;
+    opacity: 1;
+  }
+
+  &--customer {
+    composes: btn;
+    background: url(static/img/case.svg) center no-repeat;
+  }
+}

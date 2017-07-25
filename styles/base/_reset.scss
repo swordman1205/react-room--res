@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+:focus {
+  outline: 0;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+input[type="submit"],
+input[type="button"],
+input[type="password"],
+input[type="text"],
+input[type="email"],
+textarea {
+  -webkit-appearance: none;
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+iframe {
+  border: 0;
+}

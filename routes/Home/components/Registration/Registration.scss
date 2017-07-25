@@ -1,0 +1,139 @@
+@import './variables/colors';
+@import './variables/fonts';
+@import './variables/breakpoints';
+
+.registration {
+  background: url(./static/img/form-bg.jpg) center;
+  background-size: cover;
+  padding: 133px 0;
+  position: relative;
+
+  @media (max-width: $medium) {
+    padding: 50px 0 100px;
+  }
+
+  @media (max-width: $small) {
+    padding: 25px 0 55px;
+  }
+}
+
+.description {
+  color: $white;
+  width: 460px;
+
+  @media (max-width: $medium) {
+    float: none;
+    width: auto;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $small) {
+    margin-bottom: 20px;
+  }
+}
+
+.subtitle {
+  font: 900 61px/64px $Roboto;
+  margin-bottom: 10px;
+
+  @media (max-width: $small) {
+    font: 900 36px/38px $Roboto;
+    text-align: center;
+  }
+}
+
+.text {
+  font: 300 38px/42px $Roboto;
+  margin-bottom: 20px;
+
+  @media (max-width: $small) {
+    font: 400 24px/26px $Roboto;
+    text-align: center;
+  }
+}
+
+.form {
+  background-color: $transparent-white-dark;
+  color: $gray;
+  width: 382px;
+  padding: 40px 28px;
+  border-radius: 5px;
+
+  @media (max-width: $medium) {
+    float: none;
+    width: auto;
+  }
+
+  @media (max-width: $small) {
+    padding: 20px 17px;
+    margin: 0 -11px;
+  }
+}
+
+.form_title {
+  font: 400 22px/24px $Roboto;
+  margin-bottom: 15px;
+
+  @media (max-width: $small) {
+    font: 400 19px/20px $Roboto;
+  }
+}
+
+.blue {
+  color: $light-blue;
+  font-weight: 500;
+}
+
+.row {
+  margin-bottom: 22px;
+
+  @media (max-width: $small) {
+    margin-bottom: 13px;
+  }
+}
+
+.list_item {
+  color: $white;
+  font: 500 18px/22px $Roboto;
+  padding-left: 34px;
+  margin-bottom: 15px;
+
+  @media (max-width: $small) {
+    font: 500 16px/20px $Roboto;
+    margin-bottom: 10px;
+  }
+
+  &:before {
+    content: "";
+    background: url(./static/img/list-icon.svg);
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    margin-left: -34px;
+  }
+}
+
+.btn_arrow {
+  margin: -2px 0 0 5px;
+}
+
+.more {
+  font: 500 12px/14px $Roboto;
+  color: $gray;
+  position: absolute;
+  bottom: -43px;
+  left: 50%;
+  margin-left: -43px;
+  width: 86px;
+  height: 86px;
+  background: $white;
+  border-radius: 50%;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, .25);
+  text-align: center;
+  padding: 33px 0 0 0;
+  text-decoration: none;
+}
+
+.down_arrow {
+  margin-top: 5px;
+}

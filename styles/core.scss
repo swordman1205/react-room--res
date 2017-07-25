@@ -1,0 +1,9 @@
+:global {
+  @import 'base';
+  @import 'vendors/autosuggest';
+  @import 'vendors/datepicker';
+  @import 'vendors/input-range/InputRange';
+  @import 'vendors/slick';
+  @import 'pages/tools';
+  @import 'pages/search';
+}

@@ -1,0 +1,36 @@
+.search__switcher {
+  font: 13px/14px $Helvetica;
+  color: $black;
+  border: none;
+  cursor: pointer;
+  padding: 22px 0 0 0;
+  width: 27px;
+  margin-right: 15px;
+  text-align: center;
+
+  &.active {
+    color: $dark-blue;
+  }
+
+  &--map {
+    background: url(../static/img/map-icon.png) top center no-repeat;
+
+    &.active {
+      background: url(../static/img/map-icon-active.png) top center no-repeat;
+    }
+  }
+
+  &--list {
+    background: url(../static/img/list-icon.png) center 2px no-repeat;
+
+    &.active {
+      background: url(../static/img/list-icon-active.png) center 2px no-repeat;
+    }
+  }
+}
+
+.showed-filter {
+  @media (max-width: $medium) {
+    overflow: hidden;
+  }
+}

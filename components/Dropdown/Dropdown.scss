@@ -1,0 +1,72 @@
+@import './variables/colors';
+@import './variables/breakpoints';
+@import './utils/mixins';
+
+.dropdown {
+  position: relative;
+}
+
+.block {
+  visibility: hidden;
+  position: absolute;
+  padding: 23px;
+  background: $white;
+  z-index: 5;
+  width: 305px;
+  background-color: $light-blue;
+  border: 1px solid $white;
+  border-radius: 5px;
+  box-shadow: 0 1px 10px $semi-transparent-black;
+  transition: all 200ms ease-in-out;
+  transform-origin: top right;
+  transform: translate(-30px, -20px) scale(0) translate(30px, 20px);
+  right: 0;
+  margin-top: 13px;
+
+  @media (max-width: $x-small) {
+    width: 290px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 25px;
+    top: -10px;
+    @include caret-top(8px, 10px, $white);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 26px;
+    top: -9px;
+    @include caret-top(7px, 9px, $light-blue);
+  }
+}
+
+.overlay {
+  visibility: hidden;
+  background: $black;
+  position: fixed;
+  opacity: 0;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all .2s linear;
+  }
+
+.dropdown--opened {
+  composes: dropdown;
+
+  .block {
+    visibility: visible;
+    transform: translate(-30px, -20px) scale(1) translate(30px, 20px);
+  }
+
+  .overlay {
+    visibility: visible;
+    opacity: 0.5;
+  }
+}

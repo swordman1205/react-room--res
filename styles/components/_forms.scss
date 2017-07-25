@@ -1,0 +1,48 @@
+.field {
+  background-color: $white;
+  color: $gray;
+  font: 300 16px/18px $Roboto;
+  height: 35px;
+  border: 1px solid $fields-border;
+  border-radius: 0;
+  padding: 6px 9px;
+  width: 100%;
+
+  &--transparent {
+    background: transparent;
+    color: $white;
+    border: 1px solid $semi-transparent-white;
+
+    &::-webkit-input-placeholder {
+      color: $white;
+    }
+
+    &::-moz-placeholder {
+      color: $white;
+      opacity: 1;
+    }
+  }
+}
+
+.select {
+  background: url(../static/img/down-arrow.svg) right 10px center no-repeat $white;
+  background-size: 16px;
+  font: 13px/16px $Helvetica;
+  color: $label-gray;
+  border: 2px solid $blue;
+  border-radius: 5px;
+  width: 100%;
+  height: 33px;
+  padding: 0 34px 0 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &--big {
+    font: 18px/20px $Helvetica;
+    height: 44px;
+  }
+}

@@ -1,0 +1,61 @@
+@import './variables/colors';
+@import './variables/fonts';
+@import './variables/breakpoints';
+
+.table {
+  display: table;
+  width: 100%;
+
+  @media (max-width: $medium) {
+    display: block;
+  }
+}
+
+.cell {
+  display: table-cell;
+  padding-left: 15px;
+  vertical-align: top;
+
+  @media (max-width: $medium) {
+    display: block;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &--btn {
+    composes: cell;
+    padding-top: 18px;
+    width: 180px;
+
+    @media (max-width: $medium) {
+      width: auto;
+    }
+  }
+
+  &--medium {
+    composes: cell;
+    width: 228px;
+
+    @media (max-width: $medium) {
+      width: auto;
+    }
+  }
+
+  &--daterange {
+    composes: cell;
+    width: 202px;
+    padding-left: 0;
+
+    @media (max-width: $medium) {
+      width: auto;
+    }
+  }
+}
+
+.btn_arrow {
+  margin: -2px 0 0 5px;
+}

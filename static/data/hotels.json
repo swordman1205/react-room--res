@@ -1,0 +1,122 @@
+[
+  {
+    "hotelId": 1,
+    "name": "Mayflower Park Hotel",
+    "rating": 80,
+    "tripadvisorRate": 2,
+    "freeCancellation": true,
+    "description": [
+      "No Resort Fee!",
+      "Complimentary WiFi!",
+      "Close to bars & restaurants",
+      "Child care ammenities"
+    ],
+    "onlinePrice": "$99",
+    "netPrice": "$99"
+  },
+  {
+    "hotelId": 2,
+    "name": "The Hilton Hotel & Resort",
+    "rating": 90,
+    "tripadvisorRate": 2,
+    "freeCancellation": true,
+    "description": [
+      "No Resort Fee!",
+      "Complimentary WiFi!",
+      "Close to bars & restaurants",
+      "Child care ammenities"
+    ],
+    "onlinePrice": "$99",
+    "netPrice": "$99"
+  },
+  {
+    "hotelId": 3,
+    "name": "The Hilton Hotel & Resort",
+    "rating": 90,
+    "tripadvisorRate": 2,
+    "freeCancellation": true,
+    "description": [
+      "No Resort Fee!",
+      "Complimentary WiFi!",
+      "Close to bars & restaurants",
+      "Child care ammenities"
+    ],
+    "onlinePrice": "$99",
+    "netPrice": "$99"
+  },
+  {
+    "hotelId": 4,
+    "name": "Mayflower Park Hotel",
+    "rating": 80,
+    "tripadvisorRate": 2,
+    "freeCancellation": true,
+    "description": [
+      "No Resort Fee!",
+      "Complimentary WiFi!",
+      "Close to bars & restaurants",
+      "Child care ammenities"
+    ],
+    "onlinePrice": "$99",
+    "netPrice": "$99"
+  },
+  {
+    "hotelId": 1,
+    "name": "Mayflower Park Hotel",
+    "rating": 80,
+    "tripadvisorRate": 2,
+    "freeCancellation": true,
+    "description": [
+      "No Resort Fee!",
+      "Complimentary WiFi!",
+      "Close to bars & restaurants",
+      "Child care ammenities"
+    ],
+    "onlinePrice": "$99",
+    "netPrice": "$99"
+  },
+  {
+    "hotelId": 2,
+    "name": "The Hilton Hotel & Resort",
+    "rating": 90,
+    "tripadvisorRate": 2,
+    "freeCancellation": true,
+    "description": [
+      "No Resort Fee!",
+      "Complimentary WiFi!",
+      "Close to bars & restaurants",
+      "Child care ammenities"
+    ],
+    "onlinePrice": "$99",
+    "netPrice": "$99"
+  },
+  {
+    "hotelId": 3,
+    "name": "The Hilton Hotel & Resort",
+    "rating": 90,
+    "tripadvisorRate": 2,
+    "freeCancellation": true,
+    "description": [
+      "No Resort Fee!",
+      "Complimentary WiFi!",
+      "Close to bars & restaurants",
+      "Child care ammenities"
+    ],
+    "onlinePrice": "$99",
+    "netPrice": "$99"
+  },
+  {
+    "hotelId": 4,
+    "name": "Mayflower Park Hotel",
+    "rating": 80,
+    "tripadvisorRate": 2,
+    "freeCancellation": true,
+    "description": [
+      "No Resort Fee!",
+      "Complimentary WiFi!",
+      "Close to bars & restaurants",
+      "Child care ammenities"
+    ],
+    "onlinePrice": "$99",
+    "netPrice": "$99"
+  }
+]

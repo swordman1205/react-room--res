@@ -1,0 +1,130 @@
+@import './variables/colors';
+@import './variables/fonts';
+@import './variables/breakpoints';
+
+.introducion {
+  padding-top: 80px;
+
+  @media (max-width: $small) {
+    padding-top: 60px;
+  }
+}
+
+.title {
+  font: 300 48px/50px $Roboto;
+  color: $light-blue;
+  max-width: 900px;
+  margin: 0 auto 25px;
+
+  @media (max-width: $medium) {
+    font: 300 40px/42px $Roboto;
+  }
+
+  @media (max-width: $small) {
+    font: 300 30px/32px $Roboto;
+    margin: 0 auto 15px;
+  }
+}
+
+.text {
+  font: 300 22px/24px $Roboto;
+  color: $gray;
+
+  @media (max-width: $small) {
+    font: 300 18px/20px $Roboto;
+  }
+}
+
+.text_block {
+  margin-bottom: 80px;
+
+  @media (max-width: $small) {
+    margin-bottom: 50px;
+  }
+}
+
+.reasons {
+  background: url(./static/img/reasons-bg.jpg) center;
+  background-size: cover;
+  padding: 60px 0;
+
+  @media (max-width: $medium) {
+    padding: 60px 0 25px;
+  }
+
+  @media (max-width: $small) {
+    padding: 40px 0 0;
+  }
+}
+
+.subtitle {
+  font: 300 36px/38px $Roboto;
+  color: $white;
+  margin-bottom: 75px;
+
+  @media (max-width: $small) {
+    font: 300 28px/30px $Roboto;
+  }
+}
+
+.reason {
+  display: inline-block;
+  background: $white;
+  width: 294px;
+  border-radius: 6px;
+  margin: 0 20px 20px;
+  padding: 65px 22px 22px;
+  vertical-align: top;
+  position: relative;
+
+  @media (max-width: $large) {
+    margin: 0 15px 20px;
+  }
+
+  @media (max-width: $medium) {
+    width: 100%;
+    margin: 0 0 65px;
+  }
+
+  @media (max-width: $small) {
+    width: 100%;
+    margin: 0 0 60px;
+  }
+}
+
+.icon {
+  width: 90px;
+  height: 90px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, .25);
+  border-radius: 50%;
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  margin-left: -45px;
+}
+
+.icon--graph {
+  composes: icon;
+  background: url(./static/img/graph.svg) center no-repeat #fff;
+}
+
+.icon--calculator {
+  composes: icon;
+  background: url(./static/img/calculator.svg) center no-repeat #fff;
+}
+
+.icon--goblet {
+  composes: icon;
+  background: url(./static/img/goblet.svg) center no-repeat #fff;
+}
+
+.reason_title {
+  font: 300 24px/26px $Roboto;
+  color: $gray;
+  margin-bottom: 20px;
+}
+
+.reason_text {
+  font: 300 16px/18px $Roboto;
+  color: $gray;
+}

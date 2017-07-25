@@ -1,0 +1,28 @@
+@import './variables/colors';
+@import './variables/fonts';
+@import './variables/breakpoints';
+
+.item {
+  font: 300 14px/16px $Roboto;
+  float: left;
+  margin-bottom: 5px;
+
+  &:after {
+    content: '|';
+    font: 300 14px/16px $Roboto;
+    color: $link-divider;
+    margin: 0 8px;
+  }
+
+  &:last-child:after {
+    content: none;
+  }
+}
+
+.link {
+  color: $link-active-color;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

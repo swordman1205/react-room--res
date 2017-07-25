@@ -1,0 +1,16 @@
+@import './variables/colors';
+@import './variables/fonts';
+
+.title {
+  font: 22px/24px $Roboto;
+  color: $white;
+  margin-bottom: 16px;
+}
+
+.row {
+  margin-bottom: 22px;
+}
+
+.btn_arrow {
+  margin: -2px 0 0 5px;
+}

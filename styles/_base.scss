@@ -1,0 +1,32 @@
+@import './variables/colors';
+@import './variables/fonts';
+@import './variables/breakpoints';
+@import './base/typography';
+@import './base/reset';
+@import './utils/helpers';
+@import './components/buttons';
+@import './components/forms';
+
+body {
+  background-color: $background-color;
+  font: 14px/16px $Roboto;
+}
+
+.container {
+  display: block;
+  max-width: 1054px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  &--inner {
+    margin-bottom: 50px;
+  }
+}
+
+.content {
+  min-height: 650px;
+}
+
+.text-page {
+  padding: 20px 15px;
+}

@@ -1,0 +1,282 @@
+@import './variables/colors';
+@import './variables/fonts';
+@import './variables/breakpoints';
+
+.header {
+  display: table;
+  padding-bottom: 20px;
+  width: 100%;
+  box-shadow: 0 2px $light-gray;
+
+  @media (max-width: $small) {
+    display: block;
+  }
+}
+
+.label {
+  font: 700 14px/16px $Helvetica;
+  color: $dark-blue;
+  margin-bottom: 15px;
+
+  @media (max-width: $small) {
+    margin-bottom: 8px;
+  }
+
+  &--black {
+    display: inline-block;
+    font: 700 16px/18px $Helvetica;
+    color: $black;
+    margin-right: 7px;
+  }
+
+  &--inline,
+  &--inline-right {
+    composes: label;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 10px;
+
+    @media (max-width: $medium) {
+      display: block;
+      font: 700 21px/22px $Helvetica;
+      margin: 0 0 15px 0;
+    }
+  }
+
+  &--inline-right {
+    margin: 0 0 0 10px;
+
+    @media (max-width: $medium) {
+      margin: 10px 0 15px 0;
+    }
+  }
+}
+
+.sub-label {
+  display: inline-block;
+  font: 13px/14px $Helvetica;
+  color: $label-gray;
+  vertical-align: middle;
+  margin-right: 10px;
+
+  @media (max-width: $medium) {
+    display: block;
+    font: 700 21px/22px $Helvetica;
+    margin: 0 0 10px 0;
+  }
+}
+
+.value {
+  font: 300 16px/18px $Helvetica;
+  color: $dark-gray;
+}
+
+.left-cell {
+  display: table-cell;
+  vertical-align: top;
+
+  @media (max-width: $small) {
+    display: block;
+  }
+}
+
+.right-cell {
+  display: table-cell;
+  vertical-align: top;
+  width: 406px;
+  text-align: right;
+
+  @media (max-width: $medium) {
+    width: 235px;
+  }
+
+  @media (max-width: $small) {
+    display: block;
+    width: auto;
+  }
+}
+
+.inner-cell {
+  display: table-cell;
+  padding-right: 15px;
+
+  @media (max-width: $small) {
+    display: block;
+    padding-right: 0;
+    margin-bottom: 8px;
+  }
+}
+
+.modify {
+  margin-left: 15px;
+
+  @media (max-width: $medium) {
+    margin-left: 7px;
+  }
+
+  @media (max-width: $small) {
+    margin-left: 4%;
+  }
+}
+
+.filters {
+  padding: 20px 0;
+  text-align: right;
+
+  @media (max-width: $medium) {
+    position: fixed;
+    background: $white;
+    text-align: left;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    padding: 30px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: left .3s;
+  }
+
+  &--opened {
+    composes: filters;
+
+    @media (max-width: $medium) {
+      left: 0;
+    }
+  }
+}
+
+.price-range {
+  display: inline-block;
+  width: 170px;
+  vertical-align: middle;
+  margin-right: 15px;
+
+  @media (max-width: $medium) {
+    display: block;
+    width: auto;
+    margin: 35px 0 10px 0;
+  }
+}
+
+.select {
+  display: inline-block;
+  width: 165px;
+  vertical-align: middle;
+  margin-left: 11px;
+
+  @media (max-width: $large) {
+    width: 158px;
+    margin-left: 8px;
+  }
+
+  @media (max-width: $medium) {
+    display: block;
+    width: auto;
+    margin: 0 0 1px 0;
+  }
+}
+
+.select-field {
+  @media (max-width: $medium) {
+    font: 18px/20px Helvetica,Arial,sans-serif;
+    height: 44px;
+  }
+}
+
+.map {
+  float: left;
+  margin: -67px 0 20px 0;
+
+  @media (max-width: $medium) {
+    float: none;
+    margin: 0 0 10px 0;
+  }
+}
+
+.list {
+  margin-left: 340px;
+  max-height: 740px;
+  overflow: auto;
+
+  @media (max-width: $medium) {
+    margin-left: -15px;
+    max-height: none;
+  }
+
+  @media (max-width: $small) {
+    margin-left: 0;
+  }
+}
+
+.controls {
+  border-top: 1px solid $light-gray;
+  margin-left: 355px;
+  padding: 15px 0;
+  height: 67px;
+
+  @media (max-width: $medium) {
+    margin-left: 0;
+    height: auto;
+  }
+}
+
+.showing {
+  font: 300 16px/18px $Helvetica;
+  margin-top: 9px;
+
+  @media (max-width: $small) {
+    float: left;
+    width: 100%;
+  }
+}
+
+.amount-list {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.amount-item {
+  display: inline-block;
+
+  &:after {
+    content: '|';
+    margin: 0 3px;
+  }
+
+  &:last-child:after {
+    content: none;
+  }
+}
+
+.map-frame {
+  @media (max-width: $medium) {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+.filter-btn {
+  display: none;
+  float: right;
+  margin: 11px 0 0 15px;
+
+  @media (max-width: $medium) {
+    display: block;
+  }
+}
+
+.close-filter {
+  display: none;
+  margin-top: 10px;
+
+  @media (max-width: $medium) {
+    display: block;
+  }
+}
+
+.filter-switcher {
+  background: url(./static/img/filter.svg) right center no-repeat;
+  padding-right: 25px;
+}

@@ -1,0 +1,11 @@
+@import './variables/colors';
+@import './variables/breakpoints';
+
+.header {
+  background-color: $light-blue;
+  padding: 25px 0;
+
+  @media (max-width: $small) {
+    padding: 13px 0;
+  }
+}
